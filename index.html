@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book your badminton court, coaching session, or rental at Smash Point in Lahore.">
+  <title>Smash Point | Book a court</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Smash Point home">
+        <span class="brand-name">Smash Point</span>
+        <span class="brand-tagline">Book a court. Bring your game.</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="split.html">Split cost</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">🏸 Your court is calling</p>
+        <h1 id="hero-title">Your game starts here</h1>
+        <p>Pick your court, book your time, and get on court.</p>
+        <a class="button" href="#booking">Book court</a>
+      </div>
+      <div class="hero-card" aria-label="Court hours">
+        <span class="hero-icon" aria-hidden="true">⏰</span>
+        <h2>Ready when you are</h2>
+        <p>Find your slot and bring your best game.</p>
+        <p class="hero-hours">Open daily · 7:00 am – 11:00 pm</p>
+      </div>
+    </section>
+
+    <section class="section page-width" id="prices" aria-labelledby="prices-title">
+      <div class="section-heading">
+        <p class="eyebrow">🎾 Find your fit</p>
+        <h2 id="prices-title">Prices</h2>
+        <p>Choose your court, coaching, or rental.</p>
+      </div>
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Courts</h3>
+          <ul class="price-list">
+            <li><span>Standard court</span><strong>Rs 1,500 / hour</strong></li>
+            <li><span>Wooden-floor court</span><strong>Rs 2,000 / hour</strong></li>
+            <li><span>Floodlit night court</span><strong>Rs 2,500 / hour</strong></li>
+          </ul>
+        </article>
+        <article class="price-card">
+          <h3>Coaching</h3>
+          <ul class="price-list">
+            <li><span>Beginner session</span><strong>Rs 2,000 / hour</strong></li>
+            <li><span>Advanced session</span><strong>Rs 3,000 / hour</strong></li>
+            <li><span>Kids' group class</span><strong>Rs 1,200 / child per class</strong></li>
+          </ul>
+        </article>
+        <article class="price-card">
+          <h3>Rentals</h3>
+          <ul class="price-list">
+            <li><span>Racket hire</span><strong>Rs 300 / racket per session</strong></li>
+            <li><span>Shuttle tube</span><strong>Rs 1,800 / tube of 6</strong></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-title">
+      <div class="page-width about-content">
+        <p class="eyebrow">🏸 Meet your next match</p>
+        <h2 id="about-title">A better day starts on court</h2>
+        <p>Smash Point brings courts, coaching, and gear together in Lahore.</p>
+        <p>You can book a court, sharpen your skills, or bring a friend.</p>
+      </div>
+    </section>
+
+    <section class="section page-width booking-section" id="booking" aria-labelledby="booking-title">
+      <div class="section-heading">
+        <p class="eyebrow">⏰ Pick your slot</p>
+        <h2 id="booking-title">Book your court</h2>
+        <p>Choose your time and court. We’ll show your booking total.</p>
+      </div>
+      <form class="booking-form form-card" id="booking-form" novalidate>
+        <div class="form-grid">
+          <label>
+            Your name
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            Phone number
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="12" placeholder="0300-1234567" aria-describedby="phone-error" required>
+            <span class="field-hint">Enter 11 digits. A hyphen is optional.</span>
+            <span class="field-error" id="phone-error" aria-live="polite"></span>
+          </label>
+          <label>
+            Date
+            <input name="date" type="date" required>
+          </label>
+          <label>
+            Time slot
+            <select name="time" required>
+              <option value="">Choose a time</option>
+              <option>7:00 am</option>
+              <option>8:00 am</option>
+              <option>9:00 am</option>
+              <option>5:00 pm</option>
+              <option>6:00 pm</option>
+              <option>7:00 pm</option>
+              <option>8:00 pm</option>
+              <option>9:00 pm</option>
+              <option>10:00 pm</option>
+            </select>
+          </label>
+          <label>
+            Court type
+            <select name="court" required>
+              <option value="">Choose a court</option>
+              <option value="standard" data-price="1500">Standard court · Rs 1,500 / hour</option>
+              <option value="wooden" data-price="2000">Wooden-floor court · Rs 2,000 / hour</option>
+              <option value="floodlit" data-price="2500">Floodlit night court · Rs 2,500 / hour</option>
+            </select>
+          </label>
+          <label>
+            Hours
+            <select name="hours" required>
+              <option value="">Choose hours</option>
+              <option value="1">1 hour</option>
+              <option value="2">2 hours</option>
+              <option value="3">3 hours</option>
+            </select>
+          </label>
+        </div>
+        <button class="button" type="submit">Book court</button>
+        <div class="confirmation" id="booking-confirmation" role="status" aria-live="polite" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Smash Point, Lahore · Open daily 7:00 am – 11:00 pm</p>
+  </footer>
+</body>
+</html>
