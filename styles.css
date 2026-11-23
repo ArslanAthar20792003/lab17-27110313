@@ -257,6 +257,31 @@ select:focus-visible {
   font-weight: 700;
 }
 
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  padding: 18px 20px;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-item summary::marker {
+  color: var(--green);
+}
+
+.faq-item p {
+  margin-top: 12px;
+}
+
 .about-section {
   padding-block: 64px;
   background: var(--green);
@@ -410,7 +435,7 @@ select {
   }
 
   .price-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .split-main {
@@ -428,6 +453,11 @@ select {
 }
 
 @media (max-width: 520px) {
+  .page-width,
+  .header-inner {
+    width: min(1120px, calc(100% - 32px));
+  }
+
   .header-inner {
     padding-block: 14px;
     align-items: flex-start;
@@ -435,8 +465,12 @@ select {
     gap: 12px;
   }
 
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav {
-    gap: 18px;
+    gap: clamp(12px, 4vw, 18px);
   }
 
   .form-grid {
