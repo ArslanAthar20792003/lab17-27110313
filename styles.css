@@ -259,27 +259,23 @@ select:focus-visible {
 
 .faq-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
 .faq-item {
+  display: grid;
+  align-content: start;
+  gap: 10px;
   padding: 18px 20px;
   border: 1px solid var(--green);
   border-radius: 12px;
   background: var(--card);
 }
 
-.faq-item summary {
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.faq-item summary::marker {
+.faq-item h3 {
   color: var(--green);
-}
-
-.faq-item p {
-  margin-top: 12px;
+  font-size: 1.5rem;
 }
 
 .about-section {
@@ -448,6 +444,10 @@ select {
   }
 
   .about-details {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-list {
     grid-template-columns: 1fr;
   }
 }
